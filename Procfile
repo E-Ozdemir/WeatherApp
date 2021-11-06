@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn weather_proj.wsgi
