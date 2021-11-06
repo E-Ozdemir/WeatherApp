@@ -41,7 +41,7 @@ def index(request):
         # pprint(content)
         data = {
             "city": city,
-            "temp": content["main"]["temp"],
+            "temp": round(content["main"]["temp"]),
             "desc": content["weather"][0]["description"],
             "icon": content["weather"][0]["icon"]
         }
