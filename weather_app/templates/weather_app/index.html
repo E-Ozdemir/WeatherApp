@@ -9,6 +9,7 @@
     <title>WeatherApp</title>
 </head>
 <body class="m-0 p-0">
+
   <div class="messages">
     {% if messages %}
     <div class="">
@@ -18,9 +19,9 @@
             {{ message }}
         </p>
         {% endfor %}
-    </ul>
     {% endif %}
-</div>
+  </div>
+  </div>
     
     <!-- {% if messages %}
     
@@ -28,54 +29,42 @@
         {{ message }}
     {% endfor %}
         
-    {% endif %} -->
-        
+    {% endif %}
+         -->
 
     <!-- <h1>Weather App</h1>
     <br>
     <form action="">
         <input name="q">
         <input type="submit" value="Add">
-    </form>
+    </form> -->
 
-    <br>
-    {% for city in city_data %} <br>
+  
+    <!-- {% for city in city_data %} <br>
     {{ city.city.name }} <br>
     {{ city.temp }} <br>
     <img src="http://openweathermap.org/img/w/{{ city.icon }}.png" alt="icon">
     {{ city.desc }} <br> 
     <button><a href="{% url 'delete' city.city.id %}">Delete</a></button>  <hr>   
     {% endfor %} -->
+
     <div class="container">
-
-
-
-
       <div class="row">
-
           <div class="col-md-6">
-
               <h1 class="d-2 text-center m-5">Weather App</h1>
-
               <form class="d-grid gap-4 mb-5 shadow p-5">
-                  <input class="form-control mt-3" type="text" name="city">
-
+                  <input class="form-control mt-3" type="text" name="q">
                   <input class="btn btn-success mb-3" type="submit" value="ADD">
               </form>
-
-
           </div>
-
           <div class="col-md-6 mt-0 mt-md-5">
               <div class="container">
                   {% for city in city_data %}
-
                   <div class="row">
                       <div class="col-6">
                           <h3>{{ city.city.name }}</h3>
                           <span>{{ city.temp }}°C</span>
                       </div>
-
                       <div class="col-6">
                           <h6>{{ city.desc }}</h6>
                           <img src="http://openweathermap.org/img/w/{{ city.icon }}.png" alt="icon">
@@ -83,11 +72,9 @@
                       </div>
                   </div>
                   <hr>
-
                   {% endfor %}
               </div>
           </div>
-
       </div>
   </div>
 
