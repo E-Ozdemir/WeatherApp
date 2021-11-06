@@ -38,13 +38,13 @@ def index(request):
             "icon": content["weather"][0]["icon"],
         }
         city_data.append(data)
-        context = {
+    context = {
             "city_data":city_data
             }
         
         
     # print(city_data)
-    return render(request, 'weather_app/index.html',context)
+    return render(request, 'weather_app/index.html', context)
 
 def delete_city(request, id):
     city = get_object_or_404(City, id =id)
